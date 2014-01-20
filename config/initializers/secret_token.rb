@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Monkfish::Application.config.secret_key_base = 'e27a67e8c35d745ffcf010f4004cbd20f9de57a63b399bf193a7667b66ef83224bf59a0dafea1233a1b5d5f1edca1c16c3328fe5cb0118ca977872c7bd7a8d4b'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Monkfish::Application.config.secret_key_base = secure_token
