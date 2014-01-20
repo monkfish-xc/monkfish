@@ -33,6 +33,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Bootstrap
 gem 'bootstrap-sass', '2.3.2.0'
 
