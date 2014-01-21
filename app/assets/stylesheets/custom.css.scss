@@ -1,1 +1,16 @@
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  padding-top: 10px;
+  font-weight: bold;
+  &:hover {
+  	text-decoration: none;
+  }
+}
+
+.main-content {
+	padding-top: 50px;
+}
