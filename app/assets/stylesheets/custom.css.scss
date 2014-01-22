@@ -72,6 +72,25 @@ input {
   @extend .error;
 }
 
+/* posts */
+
+.posts {
+  list-style: none;
+  margin: 5px 0 0 0;
+  li {
+    padding: 5px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.author {
+  color: #C0C0C0;
+}
+
 /* miscellaneous */
 
 .debug_dump {
