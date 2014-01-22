@@ -3,3 +3,4 @@ log/*.log
 log/*!.shared
 tmp/*
 *.swp
+.secret
