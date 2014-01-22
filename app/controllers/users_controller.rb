@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile updated."
       redirect_to @user
     else
       render 'edit'
@@ -44,7 +44,10 @@ class UsersController < ApplicationController
     # Before filters
 
     def signed_in_user
-      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in to complete this action."
+      end
     end
 
     def correct_user
