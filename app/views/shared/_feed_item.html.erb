@@ -1,0 +1,12 @@
+<li id="<%= feed_item.id %>">
+  <span class="user">
+    <%= link_to feed_item.user.name, feed_item.user %>
+  </span>
+  <!--<span class="content"><%#= feed_item.content %></span>-->
+  <span class="content">
+  	<%= link_to feed_item.title, prepend_url(feed_item.content), :target => '_blank' %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+  </span>
+</li>
