@@ -16,9 +16,15 @@
 ### Views ###
 
 * Add timestamps (in words) to posts
+* Show next to post
+    * number of total comments
+    * number of comments since last visit
+    * number of users invited
 
 
-### Flow: User adds another user ###
+### Flow ###
+
+#### User adds another user ####
 
 1. Signed-in user1 wants to add another user.
 1. User1 navigates to "add another user" page.
