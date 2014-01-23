@@ -1,26 +1,18 @@
 # Todo List #
 
-- - - - -
-
-## RoR ##
+### RoR ###
 
 * Clean up Gemfile
 * Put together README.md
 
-- - -
-
-## Heroku ##
+### Heroku ###
 
 * ...
 
-- - -
-
-## Style ##
+### Style ###
 
 * Define $grayLighter
 
-- - -
-
-## Views ##
+### Views ###
 
 * Add timestamps (in words) to posts
