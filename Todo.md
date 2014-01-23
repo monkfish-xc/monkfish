@@ -20,6 +20,7 @@
     * number of total comments
     * number of comments since last visit
     * number of users invited
+* Add wrapper for long words helper to feed
 
 
 ### Flow ###
