@@ -1,5 +1,5 @@
 <li>
-  <span class="content"><%= post.title %></span>
+<span class="content"><%= link_to(post.content) do %><%= post.title %><% end %></span>
   <span class="author">
     Posted by <%= @user.name %>
   </span>
