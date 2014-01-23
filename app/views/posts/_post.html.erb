@@ -1,5 +1,7 @@
 <li>
-<span class="content"><%= link_to(post.content) do %><%= post.title %><% end %></span>
+  <span class="content">
+  	<%= link_to post.title, prepend_url(post.content), :target => '_blank' %>
+  </span>
   <span class="author">
     Posted by <%= @user.name %>
   </span>
