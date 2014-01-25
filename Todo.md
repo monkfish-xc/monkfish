@@ -5,13 +5,26 @@
 * Clean up Gemfile
 * Put together README.md
 
-### Heroku ###
+### Features ###
 
-* ...
+* Implement comment trees model
+* Email address signup verification
+* Password resets
+* Notifications
+* Search bar
+* Other-user discovery process
+
+### Features to discuss (future dev?) ###
+
+* Unique usernames
+* RSS feeds
+* API for third-party developers
+* Trending posts display
+* Refactor subselect for scaling
 
 ### Style ###
 
-* Define $grayLighter
+* Complete overhaul of styling
 
 ### Views ###
 
