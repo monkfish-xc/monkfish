@@ -1,6 +1,11 @@
 class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
 
+  has_many :synapses
+  has_many :other_users, :through => :synapses
+  has_many :inverse_synapses, :class_name  => "Synapse", :foreign_key => "other_user_id"
+  has_many :inverse_other_users, :through => :inverse_synapses, :source => :user
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 

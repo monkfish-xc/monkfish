@@ -2,5 +2,10 @@
 <h1>All users</h1>
 
 <ul class="users">
-    <%= render @users %>
+<% for user in User.all %>
+  <li>
+    <strong><%= user.name %></strong>
+    (<%= link_to "add", synapses_path(:other_user_id => user), :method => :post %>)
+  </li>
+<% end %>    
 </ul>
