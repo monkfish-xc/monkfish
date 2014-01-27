@@ -4,6 +4,22 @@
     <section>
       <h1><%= @user.name %></h1>
     </section>
+    <section>
+      <h2>Connections</h2>
+      <ul>
+      <% for synapse in @user.synapses %>
+        <li>
+          <%= synapse.other_user.name %>
+          (<%= link_to "remove", synapse, method: :delete %>)
+        </li>
+      <% end %>
+      <% for user in @user.inverse_other_users %>
+        <li>
+          <%= user.name %>
+        </li>
+      <% end %>
+      </ul>
+    </section>
   </aside>
   <div class="span8">
     <% if @user.posts.any? %>
