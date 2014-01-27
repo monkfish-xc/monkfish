@@ -13,6 +13,11 @@
 * Notifications
 * Search bar
 * Other-user discovery process
+* Full admin functionality
+    * specific admin accounts (with custom styling so it's obvious)
+* User preferences
+* Imageable user avatars and posts
+* Post title automagic
 
 ### Features to discuss (future dev?) ###
 
@@ -21,6 +26,12 @@
 * API for third-party developers
 * Trending posts display
 * Refactor subselect for scaling
+* Alternate user authentication options:
+    * OpenID
+    * LaunchKey
+    * Twitter
+    * Namecoin?
+* User authentication refactor with Devise gem (http://devise.plataformatec.com.br)
 
 ### Style ###
 
