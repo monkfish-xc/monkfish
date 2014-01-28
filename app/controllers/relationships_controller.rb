@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
   def create
     @user = User.find(params[:relationship][:followed_id])
     current_user.follow!(@user)
-    respond_to do |format|
+    respond_to do |format| # only one of these lines gets executed based on the type of request (HTTP vs Ajax)
       format.html { redirect_to @user }
       format.js
     end
