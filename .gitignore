@@ -4,3 +4,4 @@ log/*!.shared
 tmp/*
 *.swp
 .secret
+.env
