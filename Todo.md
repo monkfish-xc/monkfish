@@ -7,7 +7,6 @@
 
 ### Features ###
 
-* Implement comment trees model
 * Email address signup verification
 * Password resets
 * Notifications
