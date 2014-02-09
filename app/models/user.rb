@@ -13,6 +13,8 @@
 #
 
 class User < ActiveRecord::Base
+  has_many :cohortships
+  has_many :cohorts, :through => :cohortships
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 
