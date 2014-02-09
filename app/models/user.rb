@@ -14,6 +14,7 @@
 
 class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token
