@@ -6,5 +6,6 @@ class CreateCohortships < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :cohortships, [:user_id, :cohort_id]
   end
 end
