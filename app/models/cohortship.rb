@@ -36,5 +36,31 @@ class Cohortship < ActiveRecord::Base
     end
   end
 
-  #def self.accept(user, cohort)
+  def self.accept(user, cohort)
+    c1 = find_by_user_id_and_cohort_id(user, cohort)
+    c2 = find_by_user_id_and_cohort_id(cohort, user)
+    if c1.nil? or c2.nil?
+      return false
+    else
+      transaction do
+        c1.update_attributes(status: "accepted")
+        c2.update_attributes(status: "accepted")
+      end
+    end
+    return true
+  end
+
+  def self.reject(user, cohort)
+    c1 = find_by_user_id_and_cohort_id(user, cohort)
+    c2 = find_by_user_id_and_cohort_id(cohort, user)
+    if c1.nil? or c2.nil?
+      return false
+    else
+      transaction do
+        c1.destroy
+        c2.destroy
+        return true
+      end
+    end
+  end
 end

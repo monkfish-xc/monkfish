@@ -35,4 +35,12 @@ Monkfish::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
   resources :posts, only: [:create, :destroy]
+
+  resources :cohortships do
+    collection do
+      get :req
+      get :accept
+      get :reject      
+    end
+  end
 end
