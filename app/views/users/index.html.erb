@@ -2,5 +2,10 @@
 <h1>All users</h1>
 
 <ul class="users">
-    <%= render @users %>
+  <% @users.each do |user| %>
+  <li>
+    <%= link_to user.name %>
+    (<%= link_to "add to cohorts", controller: :cohortships, action: :req, id: user.id %>)
+  </li>
+  <% end %>
 </ul>

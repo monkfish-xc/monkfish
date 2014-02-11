@@ -3,6 +3,19 @@
   <aside class="span4">
     <section>
       <h1><%= @user.name %></h1>
+      <h3>Your Cohorts</h3>
+      <ol>
+      <% @user.cohortships.each do |cohortship| %>
+        <li>
+          <%= cohortship.cohort.name %>, 
+          <%= cohortship.status %>
+          <% if cohortship.status == "requested" %>
+            (<%= link_to "accept", controller: :cohortships, action: :accept, id: cohortship.cohort.id %> | 
+             <%= link_to "reject", controller: :cohortships, action: :reject, id: cohortship.cohort.id %>)
+          <% end %>
+        </li>
+      <% end %>
+      </ol>
     </section>
   </aside>
   <div class="span8">

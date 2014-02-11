@@ -13,7 +13,13 @@
 #
 
 class User < ActiveRecord::Base
+  has_many :cohortships
+  has_many :cohorts, :through => :cohortships
+  # has_many :inverse_cohortships, class_name: "Cohortship", :foreign_key => "cohort_id"
+  # has_many :inverse_cohorts, :through => :inverse_cohortships, :source => :user
+  
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token

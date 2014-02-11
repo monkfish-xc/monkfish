@@ -11,21 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122232133) do
+ActiveRecord::Schema.define(version: 20140211190859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "posts", force: true do |t|
-    t.string   "content"
-    t.string   "title"
-    t.string   "post_text"
+  create_table "cohortships", force: true do |t|
     t.integer  "user_id"
+    t.integer  "cohort_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "status"
+  end
+
+  add_index "cohortships", ["user_id", "cohort_id"], name: "index_cohortships_on_user_id_and_cohort_id", using: :btree
+
+  create_table "comments", force: true do |t|
+    t.text     "body"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at", using: :btree
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
+
+  create_table "posts", force: true do |t|
+    t.string   "content"
+    t.string   "title"
+    t.string   "leading_comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"
