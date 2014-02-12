@@ -37,12 +37,4 @@ class CohortshipsController < ApplicationController
     end
     redirect_to current_user
   end
-
-
-  def destroy
-    @cohortship = current_user.cohortships.find(params[:id])
-    @cohortship.destroy
-    flash[:notice] = "User has been removed from your list of cohorts."
-    redirect_to current_user
-  end
 end
