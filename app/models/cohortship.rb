@@ -34,6 +34,7 @@ class Cohortship < ActiveRecord::Base
       c1.save
       c2.save
     end
+    Notification.create(c2)
   end
 
   def self.accept(user, cohort)

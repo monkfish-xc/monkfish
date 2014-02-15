@@ -1,6 +1,7 @@
 class EventsObserver < ActiveRecord::Observer
   observe :cohortship
 
-  def after_create(record)
+  def after_create(cohortship)
+    
   end
 end
