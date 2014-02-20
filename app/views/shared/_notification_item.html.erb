@@ -1,17 +1,18 @@
-<li id="<%= feed_item.id %>" class="feed-item">
-  <!--<span class="user">
-    <%= link_to feed_item.user.name, feed_item.user %>
-  </span>-->
-  <!--<span class="content"><%#= feed_item.content %></span>-->
-  <span class="content">
+<!--<li id="<%= feed_item.id %>" class="feed-item"><span class="content">
   	<%= link_to feed_item.title, prepend_url(feed_item.content), :target => '_blank' %>
   </span>
   <span class="timestamp">
-    <small>Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= link_to feed_item.user.name, feed_item.user %></small>
+    Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= link_to feed_item.user.name, feed_item.user %>
   </span>
   <% if current_user?(feed_item.user) %>
     <%= link_to "delete", feed_item, method: :delete,
                                      data: { confirm: "Are you sure?" },
                                      title: feed_item.content %>
   <% end %>
+</li>-->
+
+<li>
+	<span>It</span>
+	<span>looks like it</span>
+	<span>worked.</span>
 </li>

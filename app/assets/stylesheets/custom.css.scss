@@ -24,6 +24,8 @@ body, html {
 
 .main-content {
 	padding-top: 50px;
+  padding-right: 0px;
+  padding-left: 0px;
   height: 100%;
 }
 
@@ -127,8 +129,14 @@ input {
   float: left;
 }
 
+.navbar {
+  background-color: #302F2F;
+  border-color: #302F2F;
+}
+
 #top-navbar {
   background-color: #302F2F;
+  border-color: #302F2F;
 }
 
 #logo {
@@ -154,14 +162,12 @@ input {
   overflow-y: scroll;
 }
 
-.feed-wrapper {
-  /*height: 100vh;
-  overflow-y: scroll;*/
-
-}
-
 .user-container {
   position: relative; 
+}
+
+.main-row {
+  width: 100%;
 }
 
 /* _feed */
@@ -181,6 +187,10 @@ input {
 .feed-item {
   .content {
     font-size: 18px;
+    display: block;
+  }
+  .timestamp {
+    display: block;
   }
 }
 
@@ -200,9 +210,11 @@ input {
 .username {
   font-size: 24px;
   float: left;
+  margin-left: 5%;
 }
 
 .post-btn {
+  margin-right: 5%;
   float: right;
   position: absolute;
   top: 25%;
