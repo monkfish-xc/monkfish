@@ -140,14 +140,6 @@ input {
   width: 65%;
 }
 
-.post-btn {
-  float: right;
-  position: absolute;
-  top: 25%;
-  bottom: 25%;
-  right: 0;
-}
-
 .username a {
   text-decoration: none;
 }
@@ -177,7 +169,7 @@ input {
 .posts {
   list-style: none;
   margin: 5px 0 0 0;
-  padding: 10px 0 10px 0;
+  padding: 5px 0 10px 0;
   li {
     padding: 5px 0;
     border-top: 1px solid #e8e8e8;
@@ -193,17 +185,38 @@ input {
 }
 
 /* _user_info */
+.user-info {
+  position: relative;
+}
+
 .username-container {
   position: relative;
   top: 0;
   left: 0;
   margin-top: 5px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 
 .username {
-  /*text-align: center;*/
   font-size: 24px;
   float: left;
+}
+
+.post-btn {
+  float: right;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  right: 0;
+}
+
+.panel-button-container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.panel-buttons {
+  position: relative;
 }
 
