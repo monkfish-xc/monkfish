@@ -1,9 +1,31 @@
-<h1>
-  <%= current_user.name %>
-</h1>
-<span>
-  <%= link_to "view my profile", current_user %>
-</span>
-<span>
-  <%= pluralize(current_user.posts.count, "post") %>
-</span>
+<div class="username-container">
+	<h1 class="username">
+  	<%= link_to current_user.name, current_user %>
+	</h1>
+	<button class="btn post-btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-link"></span></button>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Post a link</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for(@post) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <div class="field">
+            <%= f.text_area :content, placeholder: "URL" %>
+            <%= f.text_area :title, placeholder: "Title" %>
+            <%= f.text_area :leading_comment, placeholder: "Your thoughts?" %>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit "Post", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

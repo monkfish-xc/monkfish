@@ -1,18 +1,27 @@
 <% if signed_in? %>
-  <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/post_form' %>
-      </section>
-    </aside>
-    <div class="span8">
-      <h3>Post Feed</h3>
-      <%= render 'shared/feed' %> 
+<div class="container-fluid">
+  <div class="main-row">
+    <div class="col-md-4">
+      <div class="content-container">
+        <h3>Post Feed</h3>
+        <%#= render 'shared/feed' %> 
+      </div>
+    </div>
+    <div class="col-md-4 feed-container">
+      <div class="user-container">
+        <section>
+          <%= render 'shared/user_info' %>
+        </section>
+        <!--<section>
+          <%= render 'shared/post_form' %>
+        </section>-->
+        <section class="feed-wrapper">
+          <%= render 'shared/feed' %>
+        </section>
+      </div>
     </div>
   </div>
+</div>
 <% else %>
   <h1>StaticPages#home</h1>
   <p>Find me in app/views/static_pages/home.html.erb</p>
