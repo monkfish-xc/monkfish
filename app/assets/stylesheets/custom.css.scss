@@ -175,7 +175,7 @@ input {
 .posts {
   list-style: none;
   margin: 5px 0 0 0;
-  padding: 5px 0 10px 0;
+  padding: 0;
   li {
     padding: 5px 0;
     border-top: 1px solid #e8e8e8;
@@ -204,7 +204,7 @@ input {
   top: 0;
   left: 0;
   margin-top: 5px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 .username {
@@ -214,6 +214,8 @@ input {
 }
 
 .post-btn {
+  width: 55px;
+  height: 30px;
   margin-right: 5%;
   float: right;
   position: absolute;
@@ -226,6 +228,7 @@ input {
   position: relative;
   top: 0;
   left: 0;
+  margin-top: -5%;
 }
 
 .panel-buttons {
