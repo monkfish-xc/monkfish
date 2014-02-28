@@ -3,8 +3,9 @@
   <div class="main-row">
     <div class="col-md-4">
       <div class="content-container">
-        <h3>Post Feed</h3>
+        <h3 id="postarea">Post Feed</h3>
         <%#= render 'shared/feed' %> 
+        <%= render partial: 'posts/show' %>
       </div>
     </div>
     <div class="col-md-4 feed-container">
@@ -19,6 +20,22 @@
           <%= render 'shared/feed' %>
         </section>
       </div>
+<!--
+  <div id="postarea" style="height:200px;border:1px solid #428bca;padding:0 10px;overflow:hidden;">
+  </div>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Post Feed</h3>
+      <%= render 'shared/feed' %> 
+-->
     </div>
   </div>
 <!-- </div> -->
