@@ -1,11 +1,11 @@
 <% if signed_in? %>
 <!-- <div class="container-fluid"> -->
   <div class="main-row">
-    <div class="col-md-4">
-      <div class="content-container">
-        <h3 id="postarea">Post Feed</h3>
+    <div class="col-md-4 post-container">
+      <div class="content-container ">
+        <h3>Post Feed</h3>
         <%#= render 'shared/feed' %> 
-        <%= render partial: 'posts/show' %>
+        <%= render 'posts/show' %>
       </div>
     </div>
     <div class="col-md-4 feed-container">

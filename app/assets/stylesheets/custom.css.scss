@@ -166,8 +166,63 @@ body, html {
   position: relative;
 }
 
-/* sidebar */
+/* _show */
+.post-container {
+  width: 80%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} 
+.post-title {
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+}
+.post-user {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
 
+.post-content {
+  font-family: 'Source Sans Pro';
+  padding: 2% 7% 3% 10%;
+  p {
+    font-size: 18px;
+  }
+}
+
+.post-comments ol {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-container {
+  font-family: 'Source Sans Pro';
+  border-top: 1px solid #C0C0C0;
+  margin-top: 3%;
+  
+}
+.comment-name {
+  display: block;
+  font-size: 18px;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+.comment-text {
+  font-size: 16px;
+}
+
+.new-comment-container {
+  padding: 5% 0 5% 0;
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+/* sidebar */
 aside {
   section {
     padding: 10px 0;
@@ -234,4 +289,9 @@ input {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+
+.hidden-col {
+  visibility: hidden;
 }
