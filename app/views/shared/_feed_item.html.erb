@@ -1,8 +1,4 @@
 <li id="<%= feed_item.id %>" class="feed-item">
-  <!--<span class="user">
-    <%= link_to feed_item.user.name, feed_item.user %>
-  </span>-->
-  <!--<span class="content"><%#= feed_item.content %></span>-->
   <span class="content">
   	<%= link_to feed_item.title, post_path(feed_item), remote: true %>
   </span>
