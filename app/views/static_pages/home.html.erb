@@ -1,5 +1,4 @@
 <% if signed_in? %>
-<!-- <div class="container-fluid"> -->
   <div class="main-row">
     <div class="col-md-4 post-container">
       <div class="content-container ">
@@ -20,25 +19,8 @@
           <%= render 'shared/feed' %>
         </section>
       </div>
-<!--
-  <div id="postarea" style="height:200px;border:1px solid #428bca;padding:0 10px;overflow:hidden;">
-  </div>
-  <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/post_form' %>
-      </section>
-    </aside>
-    <div class="span8">
-      <h3>Post Feed</h3>
-      <%= render 'shared/feed' %> 
--->
     </div>
   </div>
-<!-- </div> -->
 <% else %>
   <h1>StaticPages#home</h1>
   <p>Find me in app/views/static_pages/home.html.erb</p>
