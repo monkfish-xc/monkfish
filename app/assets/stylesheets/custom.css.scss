@@ -6,9 +6,14 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  overflow-y: none;
+html, body {
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
 }
 
 /* application */
@@ -19,7 +24,7 @@ body, html {
 }
 
 .container-fluid {
-  height: 100%;
+  
 }
 
 /* _header */
@@ -47,7 +52,6 @@ body, html {
   width: 20%;
   overflow-x: hidden;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .user-container {
@@ -56,7 +60,7 @@ body, html {
 }
 
 .main-row {
-  width: 100%;
+  width: 100%;  
 }
 
 /* StaticPages #Home */
@@ -107,7 +111,7 @@ body, html {
   padding: 0;
   li {
     padding: 5px 0;
-    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
     a {
       text-decoration: none;
     }
@@ -117,6 +121,7 @@ body, html {
 /* _feed_item */
 .feed-wrapper {
   height: 100%;
+  overflow-y: scroll;
 }
 
 .feed-item {
@@ -165,6 +170,7 @@ body, html {
   top: 0;
   left: 0;
   margin-top: -5%;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .panel-buttons {
@@ -192,7 +198,7 @@ body, html {
 
 .post-content {
   font-family: 'Source Sans Pro';
-  padding: 2% 7% 3% 10%;
+  padding: 2% 7% 0 10%;
   p {
     font-size: 18px;
   }
@@ -220,36 +226,11 @@ body, html {
 }
 
 .new-comment-container {
-  padding: 5% 0 5% 0;
+  padding: 5% 0 15% 0;
   position: relative;
   width: 75%;
   margin: 0 auto;
 }
-
-
-/* sidebar */
-// aside {
-//   section {
-//     padding: 10px 0;
-//     border-top: 1px solid #C0C0C0;
-//     &:first-child {
-//       border: 0;
-//       padding-top: 0;
-//     }
-//     span {
-//       display: block;
-//       margin-bottom: 3px;
-//       line-height: 1;
-//     }
-//     h1 {
-//       font-size: 1.4em;
-//       text-align: left;
-//       letter-spacing: -1px;
-//       margin-bottom: 3px;
-//       margin-top: 0px;
-//     }
-//   }
-// }
 
 /* forms */
 
@@ -295,7 +276,6 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
-
 
 .hidden-col {
   visibility: hidden;
