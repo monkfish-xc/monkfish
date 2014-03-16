@@ -24,11 +24,6 @@ body {
 }
 
 /* _header */
-.main-row {
-  height: 100%;
-  padding-top: 0;
-}
-
 #logo {
   float: left;
   font-size: 1.7em;
@@ -42,6 +37,23 @@ body {
 }
 
 /* home */
+.main-row {
+  width: 100%; 
+  height: 100%;
+}
+
+.post-container {
+  width: 75%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} 
+
+.content-container {
+  float: left;
+  width: 65%;
+  height: 100%;
+}
 
 .feed-container {
   float: right;
@@ -56,33 +68,16 @@ body {
   height: 100%;
 }
 
-.main-row {
-  width: 100%;  
+.user-info {
+  position: relative;
 }
 
-/* StaticPages #Home */
-.pull-right li{
-  float: left;
-  text-decoration: none;
-}
-
-.pull-right li a {
-  &:hover {
-    background-color: transparent;
-  }
-  &:focus {
-    background-color: transparent;
-  }
-}
-
-.content-container {
-  float: left;
-  width: 65%;
+.feed-wrapper {
   height: 100%;
+  overflow-y: scroll;
 }
 
 /* Users index */
-
 .users {
   list-style: none;
   margin: 0;
@@ -97,7 +92,6 @@ body {
 }
 
 /* _feed */
-
 .posts {
   list-style: none;
   margin: 5px 0 0 0;
@@ -112,11 +106,6 @@ body {
 }
 
 /* _feed_item */
-.feed-wrapper {
-  height: 100%;
-  overflow-y: scroll;
-}
-
 .feed-item {
   margin-left: 1%;
   .content {
@@ -129,11 +118,6 @@ body {
 }
 
 /* _user_info */
-
-.user-info {
-  position: relative;
-}
-
 .username-container {
   position: relative;
   top: 0;
@@ -182,18 +166,13 @@ body {
 }
 
 /* _show */
-.post-container {
-  width: 75%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-} 
 .post-title {
   text-align: center;
   a {
     text-decoration: none;
   }
 }
+
 .post-user {
   text-align: center;
   font-style: italic;
@@ -237,7 +216,6 @@ body {
 }
 
 /* forms */
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
